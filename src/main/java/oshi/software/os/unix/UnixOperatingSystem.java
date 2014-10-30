@@ -19,14 +19,6 @@ import oshi.software.os.OperatingSystem;
  */
 public class UnixOperatingSystem implements OperatingSystem {
 
-//  UNameInfo example
-//    sysname=Linux, 
-//    nodename=virtual-debian, 
-//    release=3.2.0-4-amd64, 
-//    version=#1 SMP Debian 3.2.63-2, 
-//    machine=x86_64, 
-//    domainname=(none)
-    
     @Getter
     private final String family;
     
@@ -43,16 +35,16 @@ public class UnixOperatingSystem implements OperatingSystem {
         version = UnixOperatingSystemVersion.of(info);
     }
 
-    private static String parseManufacturer(UNameInfo info) {
-        String manufacturer = manufacturersForSysname.get(info.getSysname());
-        // TODO: handle if null
-        return manufacturer;
-    }
-    
     private static String parseFamily(UNameInfo info) {
         String family = familiesForSysname.get(info.getSysname());
         // TODO: handle if null
-        return family;
+        throw new UnsupportedOperationException("not implemented yet");
+    }
+    
+    private static String parseManufacturer(UNameInfo info) {
+        String manufacturer = manufacturersForSysname.get(info.getSysname());
+        // TODO: handle if null
+        throw new UnsupportedOperationException("not implemented yet");
     }
     
     private static final Map<String, String> familiesForSysname = new HashMap<String, String>();
