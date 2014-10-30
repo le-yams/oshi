@@ -30,7 +30,7 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>jna-unix</groupId>
+            <groupId>jna</groupId>
             <artifactId>jna-libc</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>

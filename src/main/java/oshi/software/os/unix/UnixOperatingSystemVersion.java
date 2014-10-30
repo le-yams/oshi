@@ -23,6 +23,6 @@ public final class UnixOperatingSystemVersion implements OperatingSystemVersion 
     private final String machine;
 
     public static UnixOperatingSystemVersion of(UNameInfo info) {
-        return new UnixOperatingSystemVersion(info.version, info.release, info.machine);
+        return new UnixOperatingSystemVersion(info.getVersion(), info.getRelease(), info.getMachine());
     }
 }
